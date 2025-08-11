@@ -6,7 +6,6 @@ import htmlCssProject.spring.enums.TransactionTypeEnum;
 import htmlCssProject.spring.exeptions.AccountBlockedException;
 import htmlCssProject.spring.exeptions.AccountNotFoundException;
 import htmlCssProject.spring.exeptions.BadRequestException;
-import htmlCssProject.spring.factories.TransactionDtoFactory;
 import htmlCssProject.spring.repositories.BankRepository;
 import htmlCssProject.spring.repositories.TransactionRepository;
 import jakarta.transaction.Transactional;
@@ -271,4 +270,5 @@ public class TransactionService {
     }
 
 }
+
 
