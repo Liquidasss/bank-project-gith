@@ -28,7 +28,6 @@ public class TransactionService {
     TransactionRepository transactionRepository;
 
     BankRepository bankRepository;
-    private final TransactionDtoFactory transactionDtoFactory;
 
     @Transactional
     public void transaction(Long senderId, Long receiverId, BigDecimal amount){
@@ -272,3 +271,4 @@ public class TransactionService {
     }
 
 }
+
