@@ -1,4 +1,4 @@
-# spring
+# bank project
 A small banking project built with Spring Boot, using Docker to host a PostgreSQL database and Project Lombok to reduce boilerplate code, Postman for HTTP requests.
 The application implements core banking operations, including:
 
