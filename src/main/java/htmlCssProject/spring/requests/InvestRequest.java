@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class InvestRequest {
-    Long senderId;
+    Long Id;
     BigDecimal amount;
     Double rate;
     Integer month;

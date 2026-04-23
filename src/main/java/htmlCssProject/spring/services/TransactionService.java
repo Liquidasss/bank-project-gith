@@ -8,12 +8,13 @@ import htmlCssProject.spring.exeptions.AccountNotFoundException;
 import htmlCssProject.spring.exeptions.BadRequestException;
 import htmlCssProject.spring.repositories.BankRepository;
 import htmlCssProject.spring.repositories.TransactionRepository;
-import jakarta.transaction.Transactional;
+import htmlCssProject.spring.services.impl.TransactionServiceImpl;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -22,7 +23,7 @@ import java.math.RoundingMode;
 @Service
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class TransactionService {
+public class TransactionService implements TransactionServiceImpl {
 
     TransactionRepository transactionRepository;
 
@@ -217,7 +218,6 @@ public class TransactionService {
         );
         log.info("Loan success");
     }
-
 
     @Transactional
     public void loanPaid(Long receiverId, BigDecimal amount) {

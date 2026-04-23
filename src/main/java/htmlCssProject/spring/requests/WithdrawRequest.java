@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class WithdrawRequest {
-    Long receiverId;
+    Long Id;
     BigDecimal amount;
 }

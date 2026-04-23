@@ -26,17 +26,6 @@ public class TransactionDto {
     @NonNull
     BigDecimal amount;
 
-    BigDecimal loan;
-
-    BigDecimal invest;
-
-    Integer month;
-
-    Double rate;
-
-    @NonNull
-    Boolean isLoanPaid;
-
     @NonNull
     Boolean isBlocked;
 

@@ -4,6 +4,7 @@ import htmlCssProject.spring.entities.BankEntity;
 import htmlCssProject.spring.exeptions.AccountNotFoundException;
 import htmlCssProject.spring.exeptions.BadRequestException;
 import htmlCssProject.spring.repositories.BankRepository;
+import htmlCssProject.spring.services.impl.BankServiceImpl;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -17,7 +18,7 @@ import java.math.BigDecimal;
 @Service
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class BankService {
+public class BankService implements BankServiceImpl {
 
     BankRepository bankRepository;
 
@@ -51,6 +52,7 @@ public class BankService {
                                 String.format("ID {} not found", id)
                         )
                 );
+
         if(blockUser.getIsBlocked()){
             throw new BadRequestException(String.format("User ID already blocked"));
         }

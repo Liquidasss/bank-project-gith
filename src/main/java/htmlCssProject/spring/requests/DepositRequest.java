@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class DepositRequest {
-    Long senderId;
+    Long Id;
     BigDecimal amount;
 }

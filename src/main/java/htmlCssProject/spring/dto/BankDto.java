@@ -26,5 +26,5 @@ public class BankDto {
     BigDecimal balance;
 
     @NonNull
-    boolean isBlocked;
+    Boolean isBlocked;
 }
